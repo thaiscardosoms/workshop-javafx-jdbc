@@ -13,6 +13,7 @@ import com.mysql.jdbc.Statement;
 
 import db.DB;
 import db.DbException;
+import db.DbIntegratyException;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
@@ -31,7 +32,7 @@ public class DepartmentDaoJDBC implements DepartmentDao{
 			st = conn.prepareStatement("INSERT INTO department (Name) VALUES (?)",
 					Statement.RETURN_GENERATED_KEYS);
 
-			//st.setInt(1, dep.getId());
+			
 			st.setString(1, dep.getName());
 
 			int rowsAffected = st.executeUpdate();
@@ -86,7 +87,7 @@ public class DepartmentDaoJDBC implements DepartmentDao{
 			
 			st.executeUpdate();
 		}catch(SQLException e) {
-			throw new DbException(e.getMessage());
+			throw new DbIntegratyException(e.getMessage());
 		} finally {
 			DB.closeStatement(st);
 		}

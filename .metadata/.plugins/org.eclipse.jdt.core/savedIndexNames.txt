@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+C:\Users\TEMP\ws-javafx\.metadata\.plugins\org.eclipse.jdt.core
+987271719.index
+2487902442.index
+2835018907.index
+1328841384.index
+2103231971.index
+3929678566.index
+2410053657.index
+3852673549.index
+145592163.index
+2711847950.index
+611425111.index
